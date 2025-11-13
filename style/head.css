@@ -1,0 +1,86 @@
+header {
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* navigation */
+nav {
+    width: 75%;
+    margin: 0 auto;
+
+    font-family: xiawu;
+    font-weight: 800;
+    font-size: 23.114514px;
+    text-align: center;
+    
+    z-index: -10;
+}
+
+nav a {
+    padding: 20px 50px;
+    margin: -2.5px 1vw;
+    display: inline-block;
+    
+    color: #6c6c6c;
+    text-decoration: none;
+    
+    background-image: url("../image/nav_button/default.png");
+    background-size: cover;
+
+    transition: transform 0.2s ease-out; 
+}
+
+nav a:hover {
+    color:#b7b8cb;
+    transform: translateY(5px);
+    background-image: url("../image/nav_button/hover.png");
+}
+
+/* divider */
+.head.divider {
+    border-top: 4px solid white; 
+    
+    position: absolute;
+    margin: 0px auto;
+    left: 10%;
+    width: 80%;
+    
+    z-index: 5;
+}
+  
+/* 2. 設置兩端的菱形（使用偽元素） */
+/* 注意：這個例子中，菱形會覆蓋在白線的頂部 */
+.head.divider::before,
+.head.divider::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  background-color: white; 
+}
+
+/* 設置左側菱形的位置 */
+.head.divider::before {
+  left: 0;
+}
+
+/* 設置右側菱形的位置 */
+.head.divider::after {
+  right: 0;
+}
+
+/* 3. 設置中間的 icon */
+.head.divider .icon {
+  position: absolute;
+  top: 50%; /* 垂直置中 */
+  left: 50%; /* 水平置中 */
+  
+  transform: translate(-50%, -50%); /* 精確居中 */
+  padding: 0 10px;
+  z-index: 10;
+}

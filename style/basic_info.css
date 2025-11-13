@@ -1,0 +1,216 @@
+
+.basic_info {
+    margin: 30px 0px;
+
+    .info {
+        width: 80%;
+        height: auto;
+        overflow: hidden;
+    
+        position: relative;
+        margin: 0px auto;
+        /* 背景圖片 */
+        .background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            
+            filter: brightness(50%) grayscale(10%);
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+    
+        .background:hover {
+            transform: scale(1.025);
+        }
+    
+        /* 圖片silhouette */
+            /* left 第一個 */
+        .left_silhouette::before {
+            content: "";
+            position: absolute;
+            bottom: 0%;
+            left: -12.5%;
+            width: 25%; /* 調整長方形的寬度 */
+            height: 100%; /* 長方形的高度與圖片相同 */
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色，可調整顏色和透明度 */
+            /* 使用 skewX 來產生斜角，正值往右下斜，負值往左下斜 */
+            transform: skewX(20deg); /* 20度斜角 */
+            /* 調整 transform-origin 讓旋轉或斜切點在左上角，避免形狀變形 */
+            transform-origin: bottom left;
+            z-index: 5; /* 確保它在圖片上方 */
+        }
+          
+            /* left 第二個 */
+        .left_silhouette::after {
+            content: "";
+            position: absolute;
+            bottom: -10%;
+            left: 0%;
+            width: 50%;
+            height: 100%;
+            
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: skewX(70deg);
+            transform-origin: bottom left;
+        
+            z-index: 6;
+        }
+        
+            /* right 第一個 */
+        .right_silhouette::before {
+            content: "";
+            position: absolute;
+            top: 0%;
+            right: -12.5%;
+            width: 25%;
+            height: 100%;
+        
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: skewX(20deg);
+            transform-origin: top right;
+        
+            z-index: 5; 
+        }
+          
+            /* right 第二個 */
+        .right_silhouette::after {
+            content: "";
+            position: absolute;
+            top: -10%;
+            right: 0%;
+            width: 50%;
+            height: 100%;
+        
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: skewX(70deg);
+            transform-origin: top right;
+        
+            z-index: 6;
+        }
+        
+        /* 個人圖片 */
+        .profile {
+            float: left;
+            position: absolute;
+            top: 15%;
+            left: 14%;
+            z-index: 10;
+        }
+        
+        .profile .silhouette {
+            position: absolute;
+            width: 20vw;
+            top: 0vw;
+            left: 0vw;
+            
+            z-index: 10;
+        }
+        
+        .profile .my_pic {
+            position: absolute;
+            width: 13.5vw;
+            top: 2.75vw;
+            left: 3.25vw;
+        
+            border-radius: 50%;
+        
+            z-index: 9;
+        }
+        
+        .profile p {
+            text-align: center;
+            font-family: xiawu;
+            font-style: italic;
+            text-shadow: 5px 5px #26273a;
+            color: #b2b4b8;
+            
+            position: absolute;
+            width: 30vw;
+            font-size: 3vw;
+            top: 17vw;
+            left: -5vw;
+        
+            z-index: 10;
+        }
+        
+        /* 分隔線 */
+        .divider {
+            position: absolute;
+            width: 3px;
+            height: 65%; 
+        
+            background-color: white;
+            z-index: 10;
+            
+            top: 17.5%;
+            left: 46.5%;
+        }
+        
+        .divider::after {
+            content: "";
+            position: absolute;
+            left: -4px;
+            bottom: 0px;
+        
+            width: 12px;
+            height: 12px;
+            transform: rotate(45deg);
+            
+            border-radius: 2px;
+            background-color: white; 
+        }
+        
+        .divider .icon {
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            
+            transform: translate(-51%, -50%); /* 精確居中 */
+            padding: 0px 0px;
+            z-index: 10;
+        }
+        
+        /* 個人內容 */
+        .content {
+            float: right;
+            text-align: left;
+            font-family: xiawu;
+            
+            z-index: 10;
+        }
+        
+        .content h3 {
+            color: white;
+        
+            position: absolute;
+            width: 35vw;
+            font-size: 4.5vw;
+            top: -1vw;
+            left: 39vw;
+        }
+        
+        .content p {
+            color: gray;
+        
+            position: absolute;
+            width: 28vw;
+            font-size: 2vw;
+            font-weight: 500.1919810;
+            top: 9.5vw;
+            left: 41vw;
+        }
+        
+        .content .base {
+            position: absolute;
+            width: 42%;
+            height: 10px;
+        
+            top: 30vw;
+            left: 39vw;
+        
+            background-color: rgba(135, 135, 135, 0.5);
+        }
+    }   
+}

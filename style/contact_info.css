@@ -1,0 +1,45 @@
+.contact_info {
+
+    .info {
+        width: 70%;
+        min-height: 100px;
+        /* background-color: red; */
+
+        margin: 0px auto;
+        transform: translate(0%,-5%);
+        
+
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .info .btn {
+        width: 100px;
+        height: 100px;
+        /* background-color: green; */
+
+        position: relative;
+        
+        img {
+            width: 60px;
+            height: auto;
+
+            position: absolute;
+            top: 50%; /* 垂直置中 */
+            left: 50%; /* 水平置中 */        
+            transform: translate(-50%, -50%); /* 精確居中 */
+            transition: transform 0.3s ease;
+        }
+
+        .silhouette {
+            width: 120px;
+            height: auto;
+        }
+    }
+    
+    .info .btn:hover img {
+        transform: translate(-50%, -50%) scale(1.05);
+        filter: sepia(100%) saturate(1000%) hue-rotate(340deg);
+    }
+}

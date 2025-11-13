@@ -1,0 +1,55 @@
+
+footer {
+    background-color: rgb(255, 255, 255);
+    color: #444444;
+    text-align: center;
+    padding: 1px;
+    margin: 0px auto;
+    border-radius: 15px 15px 0px 0px;
+
+    position: relative;
+    
+    .left_star {
+        .first {
+            width: 2.25vw;
+            height: auto;
+            filter: brightness(0%);
+
+            position: absolute;
+            top: 0.5vw;
+            left: 0.25vw;
+        }
+
+        .second {
+            width: 1.25vw;
+            height: auto;
+            filter: brightness(0%);
+
+            position: absolute;
+            top: 0.25vw;
+            left: 2.0vw;
+        }
+    }
+
+    .right_star {
+        .first {
+            width: 2.25vw;
+            height: auto;
+            filter: brightness(0%);
+
+            position: absolute;
+            bottom: 0.5vw;
+            right: 0.25vw;
+        }
+
+        .second {
+            width: 1.25vw;
+            height: auto;
+            filter: brightness(0%);
+
+            position: absolute;
+            bottom: 0.25vw;
+            right: 2.0vw;
+        }
+    }
+}

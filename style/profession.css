@@ -1,0 +1,157 @@
+.profession {
+
+    .info {
+        position: relative;
+        width: 90%;
+        height: auto;
+
+        margin: 0px auto;
+
+        /* 背景圖片 */
+        .background {
+            background-image: url(../image/profession/bg.png);
+            
+            /* 設定容器的基本尺寸，這樣背景才有地方顯示 */
+            min-height: 80vh;
+            width: 100%; /* 這裡請根據你的內容調整高度，例如 400px */
+            
+            /* **關鍵步驟 1：設定圖片重複** */
+            background-repeat: repeat-y; 
+            
+            /* **關鍵步驟 2：設定圖片大小** */
+            background-size: 100% auto; /* 讓圖片高度填滿背景區域，寬度保持原比例，然後水平重複 */
+            
+            /* 其他您提供的樣式 (套用到背景圖片上) */
+            background-position: top left;
+            filter: brightness(30%) grayscale(10%);
+            position: relative;
+
+            z-index: -1; 
+        }
+
+        /* 分隔線 */
+        div .divider {
+            position: relative;
+
+            width: 4px;
+            height: 180px;
+
+            background-color: white;
+            margin: 0px 60px;
+            flex-shrink: 0;
+        }
+
+        div .divider::before,
+        div .divider::after {
+            content: "";
+            
+            position: absolute;
+            left: -2px; 
+            
+            width: 4px;
+            height: 4px;
+            
+            transform: rotate(45deg);
+            border-radius: 2px;
+            border: 3px solid white;
+            
+            flex-shrink: 0;
+        }
+
+        div .divider::before {
+            top: -8px;
+        }
+
+        div .divider::after {
+            bottom: -8px;
+        }
+
+        /* 文字底線 */
+        div .base {
+            position: relative;
+            bottom: -15px;
+            left: -10px;
+
+            width: 280px;
+            height: 10px;
+    
+            background-color: rgba(135, 135, 135, 0.5);
+        }
+
+        /* Each Item */
+        .items {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+
+            height: 100%;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: center;
+
+            .item {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                
+                margin: 0px auto;
+                padding: 40px 20px;
+
+                width: 40%;
+    
+                .icon img {
+                    display: block;
+                    width: 150px; 
+                    height: auto;
+                    
+                    margin: 0 auto;
+                    transition: transform 0.3s ease;
+                }
+
+                .icon img:hover {
+                    transform: scale(1.05);
+                }
+                
+                .text_block {
+                    display: flex; /* 讓文字區塊成為 Flex 容器 */
+                    flex-direction: column; /* 讓內容垂直排列 */
+                    justify-content: flex-end; /* **關鍵：將內容推到底部** */
+
+                    p {
+                        width: 300px;
+                        margin: 5px auto;
+
+                        text-align: left;
+                        font-family: xiawu;
+                        font-size: 30px;
+                        color: white;
+                    }
+                }
+                
+                .art_block {
+                    display: flex; /* 讓文字區塊成為 Flex 容器 */
+                    flex-direction: row; /* 讓內容垂直排列 */
+                    justify-content: flex-start; /* **關鍵：將內容推到底部** */
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    
+                    width: 200px;
+                    position: relative;
+                    left: -5%;
+                    
+
+                    img {
+                        display: block;
+                        width: auto; 
+                        height: 150px;
+
+                        flex-shrink: 0;
+                        margin: 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
