@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>個人網頁排版</title>
 
+    <link rel="icon"type="image/png" href="image/icon.png">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/head.css">
     <link rel="stylesheet" href="style/basic_info.css">
@@ -13,7 +14,6 @@
     <link rel="stylesheet" href="style/project_exp.css">
     <link rel="stylesheet" href="style/contact_info.css">
     <link rel="stylesheet" href="style/footer.css">
-    <link rel="icon"type="image/png" href="image/icon.png">
 
   </head>
   <body>
@@ -31,14 +31,14 @@
     </div>
 
     <nav>
-      <a href="#">基本資料</a>
-      <a href="#">個人專業</a>
-      <a href="#">專案經歷</a>
-      <a href="#">聯絡資訊</a>
+      <a href="#basic_info">基本資料</a>
+      <a href="#profession">個人專業</a>
+      <a href="#project_exp">專案經歷</a>
+      <a href="#contact_info">聯絡資訊</a>
     </nav>
 
     <main>
-      <article class="basic_info">
+      <article id="basic_info">
 
         <section class="title">
           <div class="divider"></div>
@@ -53,7 +53,7 @@
           <div class="profile">
             <img src="image/basic_info/profile/nerd_dog.png" class="my_pic">
             <img src="image/basic_info/profile/silhouette.png" class="silhouette">
-            <p>slogan</p>
+            <p>晚餐只吃286</p>
           </div>
 
           <div class="divider">
@@ -72,7 +72,7 @@
         </section>
       </article>
       
-      <article class="profession">
+      <article id="profession">
         
         <section class="title">
           <div class="divider"></div>
@@ -153,7 +153,7 @@
 
       </article>
 
-      <article class="project_exp">
+      <article id="project_exp">
         
         <section class="title">
           <div class="divider"></div>
@@ -199,18 +199,44 @@
                 <img src="image/project_exp/intro_pic/wt.png">
               </div>
             </div>
+
+            <div class="item cc2">
+              <div class="bg"></div>
+              <a href="https://www.google.com/" class="button">
+                <img src="image/project_exp/button.png">
+                <p>Cartocraft II</p>
+                <div class="gradient"></div>
+              </a>
+              <div class="intro_pic">
+                <img src="image/project_exp/intro_pic/cc2.png">
+              </div>
+            </div>
             
+            <div class="item va">
+              <div class="bg"></div>
+              <a href="https://www.google.com/" class="button">
+                <img src="image/project_exp/button.png">
+                <p>迷璃競技場</p>
+                <div class="gradient"></div>
+              </a>
+              <div class="intro_pic">
+                <img src="image/project_exp/intro_pic/va.png">
+              </div>
+            </div>
+
           </div>
         </section>
 
         <section class="carousel">
           <span class="dot active" data-index="0"></span>
           <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
         </section>
 
       </article>
 
-      <article class="contact_info">
+      <article id="contact_info">
         
         <section class="title">
           <div class="divider"></div>

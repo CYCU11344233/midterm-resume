@@ -53,6 +53,10 @@ main::after {
     display: table;
 }
 
+html {
+    scroll-behavior: smooth; 
+}
+
 article {
     margin: 30px 0px;
     
