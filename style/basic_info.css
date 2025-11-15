@@ -193,6 +193,7 @@
         
         .content p {
             color: gray;
+            text-shadow: 1px 1px #26273a;
         
             position: absolute;
             width: 28vw;
