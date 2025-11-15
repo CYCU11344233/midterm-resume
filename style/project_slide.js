@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // 獲取整個輪播組件的根元素，作為所有查詢的起點
-    const projectExp = document.querySelector('.project_exp');
+    const projectExp = document.querySelector('#project_exp');
 
     const dotsContainer = projectExp.querySelector('.carousel');
     const dots = projectExp.querySelectorAll('.carousel .dot');
-
-    const slideWidth = 300;
 
     dotsContainer.addEventListener('click', function (event) {
         if (event.target.classList.contains('dot')) {

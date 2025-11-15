@@ -1,0 +1,118 @@
+
+header {
+    width: 100%;
+    height: 400px;
+
+    position: relative;
+    
+    .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        filter: brightness(50%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        overflow: hidden;
+
+        .silhouette {
+          z-index: 5;
+
+          .left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: 30%;
+            height: 100%;
+
+            transform: skewX(70deg);
+            transform-origin: bottom left;
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+
+          .right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            width: 30%;
+            height: 100%;
+
+            transform: skewX(-70deg);
+            transform-origin: bottom right;
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+        }
+    }
+
+    .divider {
+      position: relative;
+      top: 100%;
+      left: 10%;
+      
+      width: 80%;
+      height: 100%;
+      border-top: 4px solid white; 
+        
+      z-index: 5;
+
+      .icon {
+        position: relative;
+        top: -37px;
+        
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        
+        width: 70px;
+        height: auto;
+        
+        z-index: 10;
+      }
+
+      .gradient {
+        position: relative;
+        top: -70px;
+        
+        display: flex;
+        justify-self: center;
+        align-self: center;
+    
+        width: 98%;
+        height: 75%;
+        background-image: linear-gradient(#04007676,#21063600,#21063600);
+        opacity: 0.75;
+    
+        z-index: 0;
+      }
+    
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      position: absolute;
+      top: -8px;
+      
+      width: 12px;
+      height: 12px;
+      transform: rotate(45deg);
+      border-radius: 2px;
+      background-color: white; 
+
+      z-index: 10;
+    }
+    
+    /* 設置左側菱形的位置 */
+    .divider::before {
+      left: 0;
+    }
+    
+    /* 設置右側菱形的位置 */
+    .divider::after {
+      right: 0;
+    }
+}

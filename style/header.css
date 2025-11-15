@@ -26,16 +26,16 @@ nav a {
     color: #6c6c6c;
     text-decoration: none;
     
-    background-image: url("../image/nav_button/default.png");
+    background-image: url("../image/nav_btn.png");
     background-size: cover;
 
-    transition: transform 0.2s ease-out; 
+    transition: transform 0.3s ease-out; 
 }
 
 nav a:hover {
     color:#b7b8cb;
     transform: translateY(5px);
-    background-image: url("../image/nav_button/hover.png");
+    filter: sepia(50%) saturate(75%) brightness(125%) hue-rotate(145deg);
 }
 
 /* divider */

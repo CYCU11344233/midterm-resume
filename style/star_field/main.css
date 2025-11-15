@@ -1,0 +1,29 @@
+
+/* 星空容器：填滿整個網頁 */
+#star_field {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    /* 高度由 JavaScript 設為 px */
+
+    pointer-events: none;
+    z-index: -10;
+
+    /* 單個菱形樣式 */
+    .diamond {
+        position: absolute; /* 讓菱形可以被精確定位 */
+        background: #ffffff;
+        transform: rotate(45deg); /* 變成菱形 */
+        opacity: 0.25; 
+        transition: opacity 0.5s; /* 讓菱形有漸變效果 */
+    }
+}
+  
+
+/* 定義閃爍動畫 */
+@keyframes flicker {
+    0%, 100% { opacity: 0.25; }
+    50% { opacity: 0; }
+}
